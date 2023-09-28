@@ -38,7 +38,7 @@ h1, h2, h3{
 
 .navigation__object{
     text-decoration: none;
-    color: rgb(35, 38, 38);
+    color: rgb(56, 58, 58);
 }
 
 .welcome{
@@ -51,6 +51,7 @@ h1, h2, h3{
 }
 
 .welcome__logo{
+    margin-top: 1.8rem;
     width: 5rem;
 }
 
@@ -74,3 +75,9 @@ h1, h2, h3{
     color: beige;
 }
 
+
+
+/* Booking */
+
+.booking h1
+{text-align: center ;}
