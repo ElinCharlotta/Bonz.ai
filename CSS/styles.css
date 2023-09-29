@@ -79,7 +79,7 @@ h1, h2, h3{
 
 /* Booking */
 
-.wrapper-boking{
+.wrapper-booking{
     max-width: 1000px;
     width: 100%;
     display: grid;
@@ -88,6 +88,7 @@ h1, h2, h3{
     grid-template-areas: 
     ". navigation navigation navigation navigation ."
     "booking booking booking booking booking booking"
+    "book book book book book book"
     "rooms rooms rooms rooms rooms rooms"
     ". facilites facilites facilites facilites ."
     "footer footer footer footer footer footer" ;
@@ -129,6 +130,8 @@ h1, h2, h3{
     margin-right: 0.2rem;
 }
 
+
+/*ROOMS*/
 .rooms{
     grid-area: rooms;
 }
@@ -140,7 +143,6 @@ h1, h2, h3{
     align-items: center;
 }
 
-
 .room__singel-day{
     background-image: url("../assets/photos/01-day.jpg");
     background-repeat: no-repeat;
@@ -150,8 +152,6 @@ h1, h2, h3{
     width: 100%;
     height: 20rem;
     margin: 1rem;
- 
-
 }
 
 .room__singel-night{
@@ -167,8 +167,8 @@ h1, h2, h3{
 .room__text{
     max-width: 35rem;
     padding-bottom: 20rem;
-
 }
+
 .room__text h2{
     font-size: 3rem;
     margin-top: 20%;
