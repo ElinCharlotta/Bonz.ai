@@ -9,6 +9,7 @@ body{
     height: 100vh;
     margin: 0;
     background-color: #1f2125;
+    font-family: Open Sans;
 }
 
 .wrapper{
@@ -23,22 +24,50 @@ body{
         "footer footer footer footer footer footer" ;
 }
 
-h1, h2, h3{
-    color: rgb(240, 229, 215);
+h1, h2, h3,p{
+    color:blanchedalmond;
 }
 
+h1{
+    font-size: 6rem;
+    margin: 0;
+    padding-bottom: 3rem;
+}
+
+h2{
+    font-size: 1.3rem;
+    margin: 0.5rem 0rem 0.5rem 0;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 40 
+
+  }
+
 .navigation{ 
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     grid-area: navigation;
     height: 1rem;
+    font-weight: 700; 
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
 }
 
 .navigation__object{
     text-decoration: none;
-    color: rgb(56, 58, 58);
+    color: rgb(0, 0, 0);
 }
 
 .welcome{
@@ -52,32 +81,24 @@ h1, h2, h3{
 
 .welcome__logo{
     margin-top: 1.8rem;
-    width: 5rem;
+    width: 9rem;
 }
 
-.welcome h1{
+.welcome__headning{
     color: black;
     margin: 0;
     font-size: 4rem;
+    padding-bottom: 0;
 }
 
-.welcome p{
+.welcome__sub-headning{
     margin-top: 0rem;
     font-size: 1rem;
     font-weight: 900;
-}
-.footer{
-    column-gap:3rem;
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: beige;
+    color: rgb(0, 0, 0);
 }
 
-
-
-/* Booking */
+/**** Booking ****/
 
 .wrapper-booking{
     max-width: 1000px;
@@ -90,19 +111,19 @@ h1, h2, h3{
     "booking booking booking booking booking booking"
     "book book book book book book"
     "rooms rooms rooms rooms rooms rooms"
-    ". facilites facilites facilites facilites ."
     "footer footer footer footer footer footer" ;
 }
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 00 ,
-    'GRAD' 0,
-    'opsz' 40,
+
+  .navigation-logotype{
+    width: 2rem;
+    height: 2rem;
   }
 
 .booking{
     grid-area: booking;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .book{
@@ -111,98 +132,223 @@ h1, h2, h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1rem;
 }
-.book__arrival, .book__departure{
+
+.book__date{
     display: flex;
     flex-direction: row;
-   justify-content: center;
     align-items: center;
     width: 15rem;
     background-color: rgb(134, 155, 148);
+    border: solid 1px #333436;
+    justify-content: space-around;
+    border-radius: 2px;
 }
-.book__departure{
+
+.booking h1{
+    text-align: center ;
+}
+
+.book__button{
     margin-left: 1rem;
+    width: 4.4rem;
+    font-size:11px;
+    border-radius: 2px;
+    border-style: none;
+    padding: 0.5em;
+    background-color: rgb(16, 17, 17);
+    color: rgb(229, 235, 240);
+    font-weight: 700;
+    text-align: center;
 }
-
-.book__text{
-    margin-right: 0.2rem;
-}
-
 
 /*ROOMS*/
+
+.room__text h2{
+    font-size: 2rem;
+}
+.room__text{
+    max-width: 24rem;
+}
+
 .rooms{
     grid-area: rooms;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .room{
-    margin: 2rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:25.2rem;
+    margin: 2rem 0.2rem 2rem 0.2rem;
+}
+
+.room__singel-bed{
+    background-image: url("../assets/photos/01-day.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24rem;
+    margin: 0;
+}
+
+.room__dubbel-bed{
+    background-image: url("../assets/photos/04-day.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24rem;
+    margin: 0;
+}
+
+.room__loft{
+    background-image: url("../assets/photos/06-day.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24rem;
+    margin: 0;
+}
+
+.room__big-cabin{
+    background-image: url("../assets/photos/08-night.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24rem;
+    margin: 0;
+}
+
+.room__symbols{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 23rem;
+    color: blanchedalmond;
+}
+
+.room__symbols-align{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
+
 }
 
-.room__singel-day{
-    background-image: url("../assets/photos/01-day.jpg");
-    background-repeat: no-repeat;
-    background-size: 65%;
-    background-position: left -10%;
-    transform: translateY(-50px);
+
+/***About us***/
+
+.wrapper-about{
+    max-width: 1000px;
     width: 100%;
-    height: 20rem;
-    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    ". navigation navigation navigation navigation ."
+    "about-us about-us about-us about-us about-us about-us"
+    "about about about about about about"
+    "facilities facilities facilities facilities facilities facilities"
+    "footer footer footer footer footer footer"
 }
 
-.room__singel-night{
-    background-image: url("../assets/photos/01-night.jpg");
+.about-us__headning{
+    text-align: center;
+}
+
+.about-us{
+    grid-area: about-us;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: about;
+    background-color:  #211e1d;
+}
+
+.about__box{
+    padding:0.9rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid 1px rgb(26, 17, 5);
+}
+
+.about__box-overhead-cabin{
+    background-image: url("../assets/photos/07-night.jpg");
     background-repeat: no-repeat;
-    background-size: 75%;
-    transform: translateY(50px);
-    width: 100%;
-    height: 25rem;
-    background-position: right 100% ;
+    background-size: cover;
 }
 
-.room__text{
-    max-width: 35rem;
-    padding-bottom: 20rem;
+.about__box-cabin-img{
+    background-image: url("../assets/photos/03-night.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.room__text h2{
-    font-size: 3rem;
-    margin-top: 20%;
+.about__box-hike-img{
+    background-image: url("../assets/photos/elyse-turton-uwrWzRKRd3M-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about__box-wintercabin-img{
+    background-image: url("/assets/photos/redd-f-DeChBE0mpbk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about__box-img{
+    background-image: url("/assets/photos/08-day.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about__box-headline{
     margin-bottom: 0;
 }
 
-.symbols{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
+.facilities{
+    grid-area: facilities;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.symbols__room{
-    display: flex;
-    flex-direction: row;
-    padding-left: 20rem;
-
-
+.facilities__list{
+    color:blanchedalmond ;
+    list-style: none;
+    line-height: 1.6rem;
+    max-width:15rem;
+    font-size: 0.9rem;
 }
-  
-
-.facilites{
-    grid-area: facilites;
-}
-
-.booking h1
-{text-align: center ;}
-
-
 
 .footer{
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: beige;
+    background-color: #211e1d;
+    padding: 3rem;
+    column-gap:3rem;
 }
 
 @media screen and (max-width:768px){
