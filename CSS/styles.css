@@ -19,7 +19,6 @@ body{
         grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: auto;
         grid-template-areas: 
-        ". navigation navigation navigation navigation ."
         "welcome welcome welcome welcome welcome welcome"
         "footer footer footer footer footer footer" ;
 }
@@ -32,6 +31,7 @@ h1{
     font-size: 6rem;
     margin: 0;
     padding-bottom: 3rem;
+    text-align: center;
 }
 
 h2{
@@ -42,8 +42,6 @@ h2{
 p{
     font-size: 0.8rem;
 }
-
-
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -61,6 +59,7 @@ p{
     height: 1rem;
     font-weight: 700; 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -75,13 +74,12 @@ p{
     background-image: url(/assets/photos/09-night.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 30rem;
-    padding: 0rem 5rem 5rem 5rem;
+    height: 35rem;
 }
 
 .welcome__logo{
-    margin-top: 1.8rem;
-    width: 9rem;
+    padding-top: 5rem;
+    width: 6rem;
 }
 
 .welcome__headning{
@@ -89,6 +87,7 @@ p{
     margin: 0;
     font-size: 4rem;
     padding-bottom: 0;
+    text-align: left;
 }
 
 .welcome__sub-headning{
@@ -97,9 +96,11 @@ p{
     font-weight: 900;
     color: rgb(0, 0, 0);
 }
+.welcome__logo, .welcome__headning, .welcome__sub-headning{
+    margin-left: 11rem;
+    }
 
 /**** Booking ****/
-
 .wrapper-booking{
     max-width: 1000px;
     width: 100%;
@@ -130,9 +131,10 @@ p{
     grid-area: book;
     background-color: #333436;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1rem;
 }
 
@@ -140,56 +142,59 @@ p{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 15rem;
-    background-color: rgb(134, 155, 148);
+    width: 9rem;
+    background-color: rgb(70, 69, 67);
     border: solid 1px #333436;
     justify-content: space-around;
     border-radius: 2px;
 }
 
-.booking h1{
-    text-align: center ;
-}
-
 .book__button{
-    margin-left: 1rem;
     width: 4.4rem;
+    height: 2.7rem;
     font-size:11px;
     border-radius: 2px;
     border-style: none;
     padding: 0.5em;
     background-color: rgb(16, 17, 17);
     color: rgb(229, 235, 240);
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
 }
 
 /*ROOMS*/
+.rooms__button{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    background-color: blanchedalmond;
+    border-style: none;
+}
 
-.room__text h2{
+.rooms__text h2{
     font-size: 2rem;
 }
-.room__text{
+.rooms__text{
     max-width: 24rem;
 }
 
 .rooms{
     grid-area: rooms;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    
 }
 
 .room{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     width:25.2rem;
     margin: 2rem 0.2rem 2rem 0.2rem;
 }
 
-.room__singel-bed{
+.rooms__singel{
     background-image: url("../assets/photos/01-day.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -198,7 +203,7 @@ p{
     margin: 0;
 }
 
-.room__dubbel-bed{
+.rooms__dubbel{
     background-image: url("../assets/photos/04-day.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -207,7 +212,7 @@ p{
     margin: 0;
 }
 
-.room__loft{
+.rooms__loft{
     background-image: url("../assets/photos/06-day.jpg");
     background-position: left;
     background-repeat: no-repeat;
@@ -216,7 +221,7 @@ p{
     margin: 0;
 }
 
-.room__big-cabin{
+.rooms__cabin{
     background-image: url("../assets/photos/08-night.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -225,15 +230,17 @@ p{
     margin: 0;
 }
 
-.room__symbols{
+.rooms__symbols{
     display: flex;
     flex-direction: row;
     justify-content: space-around; 
-    width: 23rem;
-    color: blanchedalmond;
+    color: blanchedalmond; 
+    align-items: center;
+    max-width: 25rem;
+    justify-items: center;
 }
 
-.room__symbols-align{
+.rooms__symbols-align{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,10 +265,6 @@ p{
     "footer footer footer footer footer footer"
 }
 
-.about-us__headning{
-    text-align: center;
-}
-
 .about-us{
     grid-area: about-us;
     display: flex;
@@ -271,6 +274,7 @@ p{
 }
 
 .about{
+    grid-area: about;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-area: about;
@@ -288,41 +292,41 @@ p{
     border: solid 1px rgb(26, 17, 5);
 }
 
-.about__box-overhead-cabin{
+.overhead-cabin{
     background-image: url("../assets/photos/07-night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.about__box-cabin-img{
+.cabin-img{
     background-image: url("../assets/photos/03-night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.about__box-hike-img{
+.hike-img{
     background-image: url("../assets/photos/elyse-turton-uwrWzRKRd3M-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.about__box-wintercabin-img{
+.wintercabin-img{
     background-image: url("/assets/photos/redd-f-DeChBE0mpbk-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.about__box-img{
+.firewood-img{
     background-image: url("/assets/photos/08-day.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.about__box-headline{
+.about__headline{
     margin-bottom: 0;
 }
 
@@ -347,11 +351,115 @@ p{
     text-align: center;
     color: beige;
     background-color: #211e1d;
-    padding: 3rem;
+    padding: 2rem;
     column-gap:3rem;
 }
 
 @media screen and (max-width:768px){
-
+    h1{
+        margin-top: 1rem;
+        font-size: 4rem;
+    }
     
+    .wrapper{
+        grid-template-rows: repeat(6 ,1fr);
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "welcome"
+        "footer";
+}
+    .welcome{
+        height: 26.9rem;
+    }
+    .welcome__logo, .welcome__headning, .welcome__sub-headning{
+    margin-left: 7rem;
+    }
+    .welcome__logo{
+        padding-top: 2rem;
+    }
+
+    .welcome__headning{
+    font-size: 4rem;
+}
+
+    .wrapper-booking{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "navigation"
+        "booking"
+        "book"
+        "rooms"
+        "footer" ;}
+ 
+    .book{
+        justify-content: center;
+    }
+
+    .book__button{
+        width: 9rem;
+        height: 2.8rem;
+    }
+
+    .wrapper-about{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "navigation"
+        "about-us"
+        "about"
+        "facilities"
+        "footer" ;}
+
+}
+
+
+@media screen and (max-width:320px) {
+    
+    .wrapper-about{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "navigation"
+        "about-us"
+        "about"
+        "facilities"
+        "footer" ;}
+
+    .navigation {
+        margin-top: 0.5rem;
+        margin-bottom: 0.9rem;
+        font-size: 0.8rem;
+    }
+    .welcome{
+        height: 11.3rem;
+    }
+    .welcome__logo, .welcome__headning, .welcome__sub-headning{
+        margin-left: 2rem;
+    }
+
+    .welcome__logo{
+        padding-top: 0rem;
+        width: 4rem;
+        margin-top: 0rem;
+    }
+
+    .welcome__headning{
+        font-size: 1.8rem;
+    }
+
+    .welcome__sub-headning{
+        font-size: 0.6rem;;
+    }
+
+    .about{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .facilities{
+        display: flex;
+        flex-direction: column;
+  
+    }
+    .footer{
+        flex-direction: column;
+    }
+
 }
