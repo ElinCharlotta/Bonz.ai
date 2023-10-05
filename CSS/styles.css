@@ -116,7 +116,7 @@ p {
     "footer footer footer footer footer footer";
 }
 
-.navigation-logotype {
+.navigation__logotype {
   width: 2rem;
   height: 2rem;
 }
@@ -329,13 +329,18 @@ p {
   margin-bottom: 0;
 }
 
+
 .facilities {
-  grid-area: facilities;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-area: facilities;
+  margin: 2rem;
 }
 
 .facilities__list {
+  margin: 1rem;
+  padding: 1rem;
+  border: solid 2px blanchedalmond;
   color: blanchedalmond;
   list-style: none;
   line-height: 1.6rem;
@@ -352,6 +357,13 @@ p {
   background-color: #211e1d;
   padding: 2rem;
   column-gap: 3rem;
+}
+
+.join-us__button {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  font-weight: 700;
+  background-color: blanchedalmond;
+  border-style: none;
 }
 
 @media screen and (max-width: 768px) {
